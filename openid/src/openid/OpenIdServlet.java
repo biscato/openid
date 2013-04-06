@@ -47,7 +47,6 @@ public class OpenIdServlet extends HttpServlet {
             String alias = (String) request.getSession().getAttribute(ATTR_ALIAS);
             Authentication authentication = manager.getAuthentication(request, mac_key, alias);
             response.setContentType("text/html; charset=UTF-8");
-            //MyServlet;
             showAuthentication(response.getWriter(), authentication);
             return;
         }
